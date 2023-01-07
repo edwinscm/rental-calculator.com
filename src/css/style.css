@@ -1,0 +1,573 @@
+/* ----- */
+/* Index */
+/* ----- */
+
+/* 0. Reset */
+/* 1. Custom properties */
+/*  1.1. Font families */
+/*  1.2. Font sizes */
+/*  1.3. Colors */
+/*   1.3.1 Accent colors */
+/*   1.3.1 Neutral colors */
+/*   1.3.1 Error colors */
+/*   1.3.1 Product-specific custom colors */
+/*   1.3.1 Others */
+/* 2. Base style */
+/* 3. Utility classes */
+/*  3.1. Layout */
+/*  3.2. Flexbox & Grid */
+/*  3.3. Spacing  */
+/*  3.4. Sizing  */
+/*  3.5. Typography */
+/*  3.6. Backgrounds */
+/*  3.7. Borders */
+/*  3.8. Transform */
+/* 4. Responsive */
+/*  4.1. Small devices (landscape phones, 576px and up) */
+/*  4.2. Medium devices (tablets, 768px and up) */
+/*  4.3. Large devices (desktops, 992px and up) */
+/*  4.4. X-Large devices (large desktops, 1200px and up) */
+/*  4.5. XX-Large devices (larger desktops, 1400px and up) */
+
+/* -------- */
+/* 0. Reset */
+/* -------- */
+
+* {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: inherit;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.75rem; /* 12px */
+}
+
+/* -------------------- */
+/* 1. Custom properties */
+/* -------------------- */
+
+:root {
+  /* 1.1. Font families */
+  --font-family-sans-serif: "Noto Sans", sans-serif;
+  --font-family-serif: "Roboto", serif;
+  /* 1.2. Font sizes */
+  --font-size-base: 1rem;
+  --font-size-h1: 3rem; /* 48px */
+  --font-size-h2: 1.875rem; /* 30px */
+  --font-size-h3: 1.5rem; /* 24px */
+  --font-size-h4: 1.0625rem; /* 17px */
+  --font-size-h5: 0.75rem; /* 12px */
+  --font-size-h6: 0.625rem; /* 10px */
+  /* 1.3. Colors */
+  /* 1.3.1 Accent colors */
+  --color-primary: #2d72d2;
+  --color-on-primary: #ffffff;
+  /*--color-primary-container: 230 35% 7%;*/
+  /*--color-on-primary-container: 230 35% 7%;*/
+  --color-secondary: #55624c;
+  --color-on-secondary: #ffffff;
+  /*--color-secondary-container: 230 35% 7%;*/
+  /*--color-on-secondary-container: 230 35% 7%;*/
+  --color-tertiary: #1b676a;
+  --color-on-tertiary: #ffffff;
+  /*--color-tertiary-container: 230 35% 7%;*/
+  /*--color-on-tertiary-container: 230 35% 7%;*/
+  /* 1.3.2 Neutral colors */
+  --color-background: #ffffff;
+  --color-on-background: #1a1c18;
+  --color-surface: #fdfdf5;
+  --color-on-surface: #1a1c18;
+  --color-surface-variant: #e0e5d7;
+  --color-on-surface-variant: #43483e;
+  --color-outline: #72776c;
+  /* 1.3.3 Error colors */
+  --color-error: #b3251e;
+  --color-on-error: #ffffff;
+  /*--color-error-container: 230 35% 7%;*/
+  /*--color-on-error-container: 230 35% 7%;*/
+  /* 1.3.4 Product-specific custom colors */
+  /* 1.3.5 Others */
+  --h-header: 4.5rem;
+}
+
+/* -------------- */
+/* 2. Base styles */
+/* -------------- */
+
+body {
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: var(--color-on-background);
+  background-color: var(--color-background);
+}
+h1 {
+  margin-bottom: 0.5rem; /* 8px ¨*/
+  font-size: var(--font-size-h1);
+  font-weight: 100; /* light */
+  letter-spacing: -1.5px;
+}
+h2 {
+  margin-bottom: 0.5rem; /* 8px ¨*/
+  font-size: var(--font-size-h2);
+  font-weight: 100; /* light */
+  letter-spacing: -0.5px;
+}
+h3 {
+  margin-bottom: 0.5rem; /* 8px ¨*/
+  font-size: var(--font-size-h3);
+  font-weight: 400; /* regular */
+  letter-spacing: 0px;
+}
+h4 {
+  margin-bottom: 0.5rem; /* 8px ¨*/
+  font-size: var(--font-size-h4);
+  font-weight: 400; /* regular */
+  letter-spacing: 0.25px;
+}
+h5 {
+  margin-bottom: 0.5rem; /* 8px ¨*/
+  font-size: var(--font-size-h5);
+  font-weight: 400; /* regular */
+  letter-spacing: 0px;
+}
+h6 {
+  margin-bottom: 0.5rem; /* 8px ¨*/
+  font-size: var(--font-size-h6);
+  font-weight: 500; /* medium */
+  letter-spacing: 0.15px;
+}
+p {
+  margin-bottom: 0.5rem; /* 8px ¨*/
+}
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500; /* Medium */
+  letter-spacing: 1.25px;
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+  border-radius: 0.25rem; /* 4px */ /* Rounded */
+}
+.card {
+  padding: 4rem 3rem;
+  color: var(--color-on-surface-variant);
+  background-color: var(--color-surface-variant);
+  border-radius: 0.75rem; /* 12px */
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); /* Shadow */
+}
+
+.hamburger-line {
+  background-color: var(--color-on-surface-variant);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+}
+.hamburger-line::before,
+.hamburger-line::after {
+  background: var(--color-on-surface-variant);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.hamburger-line::before {
+  top: 5px;
+}
+.hamburger-line::after {
+  top: -5px;
+}
+#toggle-menu-btn:checked ~ .hamburger .hamburger-line {
+  background: transparent;
+}
+#toggle-menu-btn:checked ~ .hamburger .hamburger-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+#toggle-menu-btn:checked ~ .hamburger .hamburger-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+#toggle-menu-btn:checked ~ .open-mobile-menu {
+  height: calc(100vh - var(--h-header));
+}
+
+/* ------------------ */
+/* 3. utility classes */
+/* ------------------ */
+
+/* 3.1. Layout */
+.container {
+  width: 100%;
+  margin-bottom: 24rem; /* 384px */
+  max-width: 340px;
+  margin-inline: auto;
+}
+.hidden {
+  display: none;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.absolute {
+  position: absolute;
+}
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+.top-h-header {
+  top: var(--h-header);
+}
+.left-0 {
+  left: 0;
+}
+.left-1\/2 {
+  left: 50%;
+}
+/* 3.2. Flexbox & Grid */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-1 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
+}
+.order-4 {
+  order: 4;
+}
+.order-5 {
+  order: 5;
+}
+.grid {
+  display: grid;
+}
+.gap-20 {
+  gap: 5rem; /* 80px */
+}
+.place-items-center {
+  place-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+/* 3.3. Spacing */
+.p-8 {
+  padding: 2rem; /* 32px */
+}
+.p-10 {
+  padding: 2.5rem; /* 40px */
+}
+.pt-20 {
+  padding-top: 5rem; /* 80px */
+}
+.pb-10 {
+  padding-bottom: 2.5rem; /* 40px */
+}
+.py-16 {
+  padding-top: 4rem; /* 64px */
+  padding-bottom: 4rem; /* 64px */
+}
+.mt-20 {
+  margin-top: 5rem; /* 80px */
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.mb-2 {
+  margin-bottom: 0.5rem; /* 8px */
+}
+.mb-4 {
+  margin-bottom: 1rem; /* 16px */
+}
+.mb-20 {
+  margin-bottom: 5rem; /* 80px */
+}
+/* 3.4. Sizing */
+.w-20 {
+  width: 5rem; /* 80px */
+}
+.w-full {
+  width: 100%;
+}
+.w-header {
+  width: var(--h-header);
+}
+.h-0 {
+  height: 0;
+}
+.h-5\/6 {
+  height: 83.333333%;
+}
+.h-48	{
+  height: 12rem; /* 192px */
+}
+.h-full {
+  height: 100%;
+}
+.h-header {
+  height: var(--h-header);
+}
+.h-screen-homepage-banner {
+  height: calc(100vh - var(--h-header));
+}
+/* 3.5. Typography */
+.text-base {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+}
+.text-h1 {
+  font-size: var(--font-size-h1);
+}
+.font-bold {
+  font-weight: 700;
+}
+.tracking-wide {
+  letter-spacing: 0.5px;
+}
+.text-center {
+  text-align: center;
+}
+.text-on-surface-variant {
+  color: var(--color-on-surface-variant);
+}
+/* 3.6. Backgrounds */
+.bg-surface-variant {
+  background-color: var(--color-surface-variant);
+}
+/* 3.7. Borders */
+/* .rounded-xl { */
+/*   border-radius: 0.75rem; /1* 12px *1/ */
+/* } */
+/* 3.8. transform */
+.-translate-x-2\/4 {
+  transform: translateX(-50%);
+}
+
+/* ------------- */
+/* 4. responsive */
+/* ------------- */
+
+/* 4.1. Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Layout */
+  .container {
+    /*max-width: 540px;*/
+    max-width: 360px;
+    margin-inline: auto;
+  }
+}
+/* 4.2. Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Base style */
+  body {
+    font-family: var(--font-family-serif);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: var(--color-on-background);
+    background-color: var(--color-background);
+  }
+  h1 {
+    margin-bottom: 0.5rem; /* 8px ¨*/
+    font-size: calc(var(--font-size-h1) * 2);
+    font-weight: 100; /* light */
+    letter-spacing: -1.5px;
+  }
+  h2 {
+    margin-bottom: 0.5rem; /* 8px ¨*/
+    font-size: calc(var(--font-size-h2) * 2);
+    font-weight: 100; /* light */
+    letter-spacing: -0.5px;
+  }
+  h3 {
+    margin-bottom: 0.5rem; /* 8px ¨*/
+    font-size: calc(var(--font-size-h3) * 2);
+    font-weight: 400; /* regular */
+    letter-spacing: 0px;
+  }
+  h4 {
+    margin-bottom: 0.5rem; /* 8px ¨*/
+    font-size: calc(var(--font-size-h4) * 2);
+    font-weight: 400; /* regular */
+    letter-spacing: 0.25px;
+  }
+  h5 {
+    margin-bottom: 0.5rem; /* 8px ¨*/
+    font-size: calc(var(--font-size-h5) * 2);
+    font-weight: 400; /* regular */
+    letter-spacing: 0px;
+  }
+  h6 {
+    margin-bottom: 0.5rem; /* 8px ¨*/
+    font-size: calc(var(--font-size-h6) * 2);
+    font-weight: 500; /* medium */
+    letter-spacing: 0.15px;
+  }
+  /*Logo*/
+  .logo {
+    position: static;
+    left: auto;
+    transform: none;
+  }
+  /* Open mobile menu */
+  .open-mobile-menu {
+    overflow: visible;
+    position: static;
+    height: initial;
+    background-color: inherit;
+  }
+  /*  Utility classes  */
+  /* Layout */
+  .container {
+    /*max-width: 720px;*/
+    max-width: 540px;
+    margin-inline: auto;
+  }
+  .md-hidden {
+    display: none;
+  }
+  /* Flexbox & Grid */
+  .md-flex {
+    display: flex;
+  }
+  .md-flex-row {
+    flex-direction: row;
+  }
+  .md-flex-1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+  }
+  .md-order-1 {
+    order: 1;
+  }
+  .md-order-2 {
+    order: 2;
+  }
+  .md-order-3 {
+    order: 3;
+  }
+  .md-order-4 {
+    order: 4;
+  }
+  .md-order-5 {
+    order: 5;
+  }
+  .md-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .md-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .md-gap-x-8 {
+    column-gap: 2rem; /* 32px */
+  }
+  .md-justify-between {
+    justify-content: space-between;
+  }
+  .md-items-center {
+    align-items: center;
+  }
+  /* Spacing */
+  .md-mb-0 {
+    margin-bottom: 0;
+  }
+  .md-mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .md-max-w-3xl {
+    max-width: 48rem; /* 768px */
+  }
+  /* Typography */
+  .md-text-base {
+    font-size: 1rem; /* 16px */
+    line-height: 1.5rem; /* 24px */
+  }
+  .md-text-left {
+    text-align: left;
+  }
+}
+/* 4.3. Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Layout */
+  .container {
+    /*max-width: 960px;*/
+    max-width: 720px;
+    margin-inline: auto;
+  }
+}
+/* 4.4. X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Layout */
+  .container {
+    /*max-width: 1140px;*/
+    max-width: 960px;
+    margin-inline: auto;
+  }
+}
+/* 4.5. XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  /* Layout */
+  .container {
+    /*max-width: 1320px;*/
+    max-width: 1140px;
+    margin-inline: auto;
+  }
+}

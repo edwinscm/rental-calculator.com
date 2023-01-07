@@ -1,0 +1,11 @@
+{
+  "name": "@rental-calculator/website",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0"
+  }
+}
