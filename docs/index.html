@@ -24,13 +24,13 @@
     class="container mb-0 h-header flex items-center md-justify-between md-gap-x-8"
   >
     <!-- Menu button -->
-    <input id="toggle-menu-btn" class="hidden" type="checkbox" />
+    <!-- <input id="toggle-menu-btn" class="hidden" type="checkbox" />
     <label
       for="toggle-menu-btn"
       class="hamburger absolute left-0 w-header h-header grid place-items-center md-hidden"
     >
       <span class="hamburger-line"> </span>
-    </label>
+    </label> -->
 
     <!-- Logo -->
     <a
@@ -44,7 +44,7 @@
       class="absolute inset-x-0 top-h-header h-0 overflow-hidden bg-surface-variant open-mobile-menu"
     >
       <ul class="h-5/6 flex flex-col md-flex-row md-gap-x-8">
-        <li class="text-h1 flex-1 grid place-items-center md-text-base">
+        <li class="text-h1 flex-1 grid place-items-center">
           <a href="https://rental-calculator.up.railway.app/" class="button"
             >Sign in</a
           >
@@ -57,17 +57,95 @@
 
     <main>
       <!-- Homepage banner -->
-      <section>
+      <section">
   <div class="container mb-0">
     <div class="h-screen-homepage-banner grid place-items-center">
       <div class="text-center">
-        <h1>Rental Calculator</h1>
-        <p>Calculate return on a rental property</p>
+        <h1 class="font-extra-bold">Rental Calculator</h1>
+        <p class="mb-6">Calculate the returns on a rental property</p>
+        <a href="https://rental-calculator.up.railway.app/" class="button"
+          >Get started</a
+        >
       </div>
     </div>
   </div>
 </section>
 
+
+      <!-- Features split -->
+      <section>
+  <div class="container">
+    <div class="grid gap-20 md-grid-cols-2 md-items-center">
+      <div>
+        <h3>1. Search for a property</h3>
+        <p>
+          Find a property on one of your favorite real estate websites (Zillow,
+          Realtor.com, Redfin, etc...).
+        </p>
+      </div>
+      <div>
+        <img src="./images/zillow-house.jpg" alt="Zillow house" />
+      </div>
+      <div>
+        <h3>2. Create a new report</h3>
+        <p>Fill out the form with the data from the real estate website.</p>
+      </div>
+      <div>
+        <img
+          src="./images/new-rental-report.jpg"
+          alt="New rental report"
+        />
+      </div>
+      <div>
+        <h3>3. Visualize returns</h3>
+        <p>Get a nice report with all the information about the property.</p>
+      </div>
+      <div>
+        <img src="./images/rental-report.jpg" alt="Rental report" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <!-- Call to action -->
+      <section class="pt-40">
+  <div
+    class="container card text-center md-flex md-justify-between md-items-center"
+  >
+    <div class="md-text-left mb-4 md-mb-0">
+      <h3>Start your first report now</h3>
+      <p>Create a report for a rental property</p>
+    </div>
+
+    <!-- call to action button -->
+    <a href="https://rental-calculator.up.railway.app/" class="button"
+      >Start a report</a
+    >
+  </div>
+</section>
+
     </main>
+
+    <!-- Footer -->
+    <footer>
+  <div class="container pt-20 pb-10 text-center">
+    <!-- <nav class="md-flex">
+      <div class="md-flex-1">RC</div>
+      <div class="md-flex-1">
+        <h2 class="mb-4 text-base tracking-wide font-bold">
+          Rental Calculator
+        </h2>
+        <ul>
+          <li class="mb-4"><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+    </nav> -->
+
+    <!-- Copyright -->
+    <p class="mt-20">© Rental Calculator</p>
+  </div>
+</footer>
+
   </body>
 </html>
